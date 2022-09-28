@@ -1,0 +1,13 @@
+name: "Check version"
+description: "Check if version is higher than all existing tags"
+inputs:
+  version-format:
+    description: "Type of Version file. 'node' if it is in package.json, 'file' if in VERSION file."
+    required: true
+    default: "file"
+outputs:
+  version:
+    description: "The current version of the Project"
+runs:
+  using: "node16"
+  main: "dist/index.js"
