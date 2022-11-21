@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "prettier --check .",
     "prepare": "ncc build src/index.js -o dist --source-map --license licenses.txt",
-    "all": "npm run lint && npm run prepare"
+    "all": "yarn run lint && yarn run prepare"
   },
   "repository": {
     "type": "git",
