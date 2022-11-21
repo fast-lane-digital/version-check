@@ -27,10 +27,10 @@ jobs:
         uses: actions/setup-node@v2.5.1
         with:
           node-version: 16.x
-      
+
       - name: Show diff
         run: git diff
-        
+
       - name: Show current branch
         run: git branch
 
