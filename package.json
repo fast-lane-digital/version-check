@@ -1,6 +1,6 @@
 {
   "name": "version-check",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Check whether the Version inside the VERSION file or package.json is valid and the newest",
   "main": "source/index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/fast-lane-digital/version-check#readme",
   "dependencies": {
-    "@actions/core": "^1.9.1",
+    "@actions/core": "^1.10.0",
     "semver": "^7.3.7"
   },
   "devDependencies": {
