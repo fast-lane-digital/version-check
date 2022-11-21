@@ -32,7 +32,7 @@ jobs:
         run: yarn info; yarn --version
 
       - name: Show current branch
-        run: git branch
+        run: git show-ref
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
