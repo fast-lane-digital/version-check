@@ -29,7 +29,7 @@ jobs:
           node-version: 16
 
       - name: Show versions
-        run: yarn info
+        run: yarn info; yarn --version
 
       - name: Show current branch
         run: git branch
