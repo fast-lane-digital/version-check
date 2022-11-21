@@ -28,8 +28,8 @@ jobs:
         with:
           node-version: 16
 
-      - name: Show diff
-        run: git diff
+      - name: Show versions
+        run: yarn info
 
       - name: Show current branch
         run: git branch
