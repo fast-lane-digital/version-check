@@ -23,19 +23,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set Node.js 16
+      - name: Set Node.js
         uses: actions/setup-node@v3.5.1
         with:
-          node-version: 16
-
-      - name: Show versions
-        run: yarn info; yarn --version
-
-      - name: Show current branch
-        run: git show-ref
+          node-version: 18.12.1
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: |
+          yarn --version
+          yarn install --frozen-lockfile
 
       - name: Rebuild the dist/ directory
         run: yarn run prepare
@@ -55,5 +51,5 @@ jobs:
         if: failure()
         uses: actions/upload-artifact@v3
         with:
-          name: Changed Dist  
+          name: Changed Dist
           path: dist/
