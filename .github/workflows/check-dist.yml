@@ -50,3 +50,10 @@ jobs:
             exit 1
           fi
         id: diff
+
+      - name: Upload Artifact
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: Changed Dist  
+          path: dist/
