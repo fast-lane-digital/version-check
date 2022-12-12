@@ -1,8 +1,5 @@
-# `dist/index.js` is a special file in Actions.
-# When you reference an action with `uses:` in a workflow,
-# `index.js` is the code that will run.
-# For our project, we generate this file through a build process from other source files.
-# We need to make sure the checked-in `index.js` actually matches what we expect it to be.
+# Lint the Files in this project with prettier
+# to achieve consistent code formatting
 name: Check formatting
 
 on:
@@ -23,10 +20,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set Node.js 16.x
-        uses: actions/setup-node@v2.5.1
+      - name: Set Node.js
+        uses: actions/setup-node@v3.5.1
         with:
-          node-version: 16.x
+          node-version: 18.12.1
 
       - name: Check formatting with prettier
         run: npx prettier --check .
